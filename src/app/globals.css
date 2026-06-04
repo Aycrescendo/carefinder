@@ -3,25 +3,56 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-plus-jakarta: 'Plus Jakarta Sans Variable', sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* ─── Dark Mode ────────────────────────────────────────────────────────────── */
+
+.dark body {
+  background-color: #0a0a0a;
+  color: #ededed;
+}
+
+.dark .bg-white {
+  background-color: #1a1a1a !important;
+}
+
+.dark .bg-neutral-50 {
+  background-color: #111111 !important;
+}
+
+.dark .bg-neutral-100 {
+  background-color: #1f1f1f !important;
+}
+
+.dark .border-neutral-200 {
+  border-color: #2e2e2e !important;
+}
+
+.dark .text-neutral-900 {
+  color: #ededed !important;
+}
+
+.dark .text-neutral-700 {
+  color: #d4d4d4 !important;
+}
+
+.dark .text-neutral-600 {
+  color: #a3a3a3 !important;
+}
+
+.dark .text-neutral-500 {
+  color: #737373 !important;
+}
+
+.dark .shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5) !important;
 }
