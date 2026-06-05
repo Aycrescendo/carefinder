@@ -15,6 +15,7 @@ const nextConfig = {
       allowedOrigins: ['localhost:3000'],
     },
   },
+  serverExternalPackages: ['@supabase/supabase-js'],
 }
 
 export default nextConfig
