@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { Suspense } from 'react'
 import { searchHospitals } from '@/lib/supabase/queries-server'
 import HospitalCard from '@/components/hospital/HospitalCard'

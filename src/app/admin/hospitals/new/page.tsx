@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import HospitalForm from '@/components/admin/HospitalForm'
 import type { Metadata } from 'next'
 

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getAllPendingReviews } from '@/lib/supabase/queries-server'
 import ReviewModerationClient from '@/components/admin/ReviewModerationClient'
 import type { Metadata } from 'next'
