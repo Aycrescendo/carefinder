@@ -46,7 +46,7 @@ function SearchSkeleton() {
 
 async function SearchResults({ searchParams }: { searchParams: SearchParams }) {
   const filters = buildFilters(searchParams)
-  const page = searchParams.page ? Number(searchParams.page) : 1
+  const page = searchParams.page ? Number(searchParams.page as string) : 1
 
   let results: Awaited<ReturnType<typeof searchHospitals>> = {
     data: [],

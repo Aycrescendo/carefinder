@@ -114,6 +114,8 @@ export interface SearchParams {
   radius?: string
   lat?: string
   lng?: string
+  page?: string
+  [key: string]: string | undefined
 }
 
 // ─── CSV Export ──────────────────────────────────────────────────────────────
