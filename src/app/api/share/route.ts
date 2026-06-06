@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     const searchDescription = parts.length > 0 ? parts.join(' ') : 'hospitals across Nigeria'
 
     const { error } = await resend.emails.send({
-      from: 'Carefinder <noreply@carefinder.ng>',
+      from: 'Carefinder <onboarding@resend.dev>',
       to: [to],
       subject: `Hospital search results — ${searchDescription}`,
       html: `
