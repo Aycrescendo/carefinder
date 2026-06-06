@@ -2,7 +2,6 @@ export const dynamic = 'force-dynamic'
 import { getHospitalById, getReviews } from '@/lib/supabase/queries-server'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import * as DOMPurify from 'isomorphic-dompurify'
 import { marked } from 'marked'
 marked.setOptions({ breaks: true })
 import Link from 'next/link'
@@ -78,7 +77,7 @@ export default async function HospitalPage({ params }: HospitalPageProps) {
   if (!hospital) notFound()
 
   const descriptionHtml = hospital.description_md
-    ? DOMPurify.sanitize(marked.parse(hospital.description_md.replace(/\\n/g, '\n')) as string)
+    ? (marked.parse(hospital.description_md.replace(/\\n/g, '\n')) as string)
     : null
 
   return (
