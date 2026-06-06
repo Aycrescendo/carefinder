@@ -1,7 +1,8 @@
+export const dynamic = 'force-dynamic'
 import { getHospitalById, getReviews } from '@/lib/supabase/queries-server'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import DOMPurify from 'isomorphic-dompurify'
+import * as DOMPurify from 'isomorphic-dompurify'
 import { marked } from 'marked'
 marked.setOptions({ breaks: true })
 import Link from 'next/link'
